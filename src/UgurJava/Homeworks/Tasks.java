@@ -24,6 +24,7 @@ public class Tasks {
         }
         if (flag == 0) {
             System.out.println("Hatalı giriş yaptınız. ");
+            // break output
         }
     }
 }
