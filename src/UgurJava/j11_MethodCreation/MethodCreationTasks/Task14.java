@@ -1,11 +1,8 @@
 package UgurJava.j11_MethodCreation.MethodCreationTasks;
 
 import java.util.Scanner;
-
 public class Task14 {
-
     public static void main(String[] args) {
-
     /*
     Fazla mesaiyi hesaplayan bir  method create ediniz
     Yazacağınız program toplam kazancı return etsin.
@@ -39,8 +36,8 @@ public class Task14 {
         double çarpan = scanner.nextDouble();
 
         System.out.println("toplam = "+ucretHesapla(saatucret, mesbas, mesbit, çarpan));
+        scanner.close();
     }
-
     public static double ucretHesapla(double ucret, double mesbas, double mesbit, double çarpan){
         double toplam = mesbit-mesbas<=8 ? (mesbit-mesbas)*ucret : 8*ucret+(mesbit-mesbas-8)*ucret*çarpan;
         return toplam;

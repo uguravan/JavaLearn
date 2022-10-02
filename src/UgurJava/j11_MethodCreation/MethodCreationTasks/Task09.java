@@ -18,9 +18,9 @@ public class Task09 {
         System.out.print("saat giriniz: ");
         int saat = scanner.nextInt();
         howManySeconds(saat);
+        scanner.close();
     }
-
     public static void howManySeconds(int s) {
-        System.out.println(s*3600);
+        System.out.println(s*3600+" saniye");
     }
 }

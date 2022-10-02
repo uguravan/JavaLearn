@@ -24,6 +24,7 @@ public class Task07 {
         int c = scanner.nextInt();
 
         min(a,b,c);
+        scanner.close();
     }
 
     public static void min(int a,int b,int c) {

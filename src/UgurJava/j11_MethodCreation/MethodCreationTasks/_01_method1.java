@@ -17,6 +17,7 @@ public class _01_method1 {
         System.out.print("bir sayı giriniz: ");
         int max= scan.nextInt();
         System.out.println(randomNum(max));
+        scan.close();
     }
     public static double randomNum(int max) {
         double maxi = Math.random() * max;

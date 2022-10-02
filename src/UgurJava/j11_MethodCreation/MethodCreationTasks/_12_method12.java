@@ -38,6 +38,7 @@ public class _12_method12 {
         int sayi= scanner.nextInt();
 
         System.out.println(powerOfThree (sayi));
+        scanner.close();
     }
     public static boolean powerOfThree (int a) {
         boolean power = false;
@@ -47,7 +48,4 @@ public class _12_method12 {
         if (a%3 == 0) power = true;
         return power;
     }
-
-
-
 }

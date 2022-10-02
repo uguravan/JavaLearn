@@ -3,7 +3,6 @@ package UgurJava.j11_MethodCreation.MethodCreationTasks;
 import java.util.Scanner;
 
 public class Task06 {
-
 	public static void main(String[] args) {
 		/*
 		 Kullanıcıya paralelkenar, dikdörtgen ve üçgen kelimelerinden birini 
@@ -22,6 +21,7 @@ public class Task06 {
 		}else if (secim.equals("d")) {
 			dikdörtgen(a, b);
 		}else System.out.println("Hatalı giriş ");
+		scanner.close();
 	}
 	public static void paralelKenar(int paralelh, int paralelt) {
 		Scanner scanner = new Scanner(System.in);
