@@ -24,6 +24,7 @@ public class Odevl7 {
                 for (int j = 0; j < s2.length(); j++) {
                     if (s1.charAt(i) == s2.charAt(j)) {
                         s2 = s2.substring(0,j) + s2.substring(j + 1);
+                        break;
                     }
                 }
             }
