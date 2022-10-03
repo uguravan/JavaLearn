@@ -11,9 +11,9 @@ public class Odevl10 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("bir cümle giriniz: ");
-        String cumle = scan.nextLine().toLowerCase().trim();
+        String cumle = scan.nextLine().toLowerCase();
         System.out.print("bir kelime giriniz: ");
-        String kelime = scan.next().toLowerCase().trim();
+        String kelime = scan.nextLine().toLowerCase();
 
         if (cumle.indexOf(kelime) > -1) {
             if (cumle.indexOf(kelime) == cumle.lastIndexOf(kelime)) {
