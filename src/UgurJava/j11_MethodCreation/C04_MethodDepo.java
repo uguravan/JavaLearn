@@ -5,7 +5,6 @@ public class C04_MethodDepo {
         /*
         her class'da main method mecburiyeti yoktur. belilrli aksiyonlara özel class'lar tanımlanabilir..
          */
-
     public static void gecmeNotu(int not) {
 
         if (not >= 85) {
