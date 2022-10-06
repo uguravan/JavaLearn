@@ -71,6 +71,7 @@ public class TaskKelimeOyunu {
 
             case 'H':
                 System.out.println("oyun bitti");
+                System.out.println("metnin son hali: "+word1);
                 System.out.println("1.oyuncunun puanı : "+puan1+"\n2.oyunucunun puanı : "+puan2);
                 if (puan1 > puan2) {
                     System.out.print("Tebrikler 1.oyuncu kazandı. ");
@@ -104,6 +105,7 @@ public class TaskKelimeOyunu {
 
             case 'H':
                 System.out.println("oyun bitti");
+                System.out.println("metnin son hali: "+word1);
                 System.out.println("1.oyuncunun puanı : "+puan1+"\n2.oyunucunun puanı : "+puan2);
                 if (puan1 > puan2) {
                     System.out.print("Tebrikler 1.oyuncu kazandı. ");
