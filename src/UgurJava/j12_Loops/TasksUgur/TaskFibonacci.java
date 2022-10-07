@@ -1,4 +1,4 @@
-package UgurJava.j12_Loops.Tasks;
+package UgurJava.j12_Loops.TasksUgur;
 
 public class TaskFibonacci {
     static int a=1, b=1;

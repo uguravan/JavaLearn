@@ -1,4 +1,4 @@
-package UgurJava.j12_Loops;
+package UgurJava.j12_Loops.L01_ForLoop;
 
 import java.util.Scanner;
 

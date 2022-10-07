@@ -1,4 +1,4 @@
-package UgurJava.j12_Loops.Tasks;
+package UgurJava.j12_Loops.TasksUgur;
 
 import java.util.Scanner;
 
