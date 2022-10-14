@@ -1,7 +1,5 @@
 package HalukHoca.j06_Comparison_Karsılastırma_Operators.tasks;
 
-import java.util.Scanner;
-
 public class _17_ComparisonOperators_equal_equal {
 
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package HalukHoca.j04_AritmeticOperators.tasks;
 
-import java.util.Scanner;
-
 public class _08_ArithmeticOperator_multiply1 {
 
     public static void main(String[] args) {

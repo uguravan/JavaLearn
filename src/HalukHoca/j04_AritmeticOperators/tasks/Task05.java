@@ -1,7 +1,5 @@
 package HalukHoca.j04_AritmeticOperators.tasks;
 
-import java.util.Scanner;
-
 public class Task05 {
 
     /*

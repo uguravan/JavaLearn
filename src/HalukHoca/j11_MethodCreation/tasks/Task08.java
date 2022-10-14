@@ -1,8 +1,5 @@
 package HalukHoca.j11_MethodCreation.tasks;
 
-import java.time.LocalDate;
-import java.util.Scanner;
-
 public class Task08 {
 
     public static void main(String[] args) {

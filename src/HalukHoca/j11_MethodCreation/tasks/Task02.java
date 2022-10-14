@@ -1,4 +1,4 @@
-package HalukHoca.j11_MethodCreation;
+package HalukHoca.j11_MethodCreation.tasks;
 
 import java.util.Scanner;
 

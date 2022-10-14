@@ -1,7 +1,5 @@
 package HalukHoca.j08_ifStatement_TernaryOperator.tasks;
 
-import java.util.Scanner;
-
 public class _05_if_else_if_statement5 {
 
     public static void main(String[] args) {

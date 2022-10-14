@@ -1,7 +1,5 @@
 package HalukHoca.j11_MethodCreation.tasks;
 
-import java.util.Scanner;
-
 public class Task07 {
 
     public static void main(String[] args) {

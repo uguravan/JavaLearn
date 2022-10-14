@@ -1,7 +1,5 @@
 package HalukHoca.j11_MethodCreation.tasks;
 
-import java.util.Scanner;
-
 public class _12_method12 {
 
     /*

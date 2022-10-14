@@ -1,7 +1,5 @@
 package HalukHoca.j10_StringManipulations;
 
-import java.util.Scanner;
-
 public class C09_Replace_ReplaceAll {
     public static void main(String[] args) {
 

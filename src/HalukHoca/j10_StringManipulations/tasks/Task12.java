@@ -1,7 +1,5 @@
 package HalukHoca.j10_StringManipulations.tasks;
 
-import java.util.Scanner;
-
 public class Task12 {
     public static void main(String[] args) {
        /*  TASK :
