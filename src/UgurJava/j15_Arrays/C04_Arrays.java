@@ -12,5 +12,6 @@ public class C04_Arrays {
         Arrays.sort(sayi1);//[3,39,63,72,84]
         Arrays.sort(sayi2);//[3,39,63,72,84]
         System.out.println("sayı1 ve sayı2 eşit mi : " + Arrays.equals(sayi1, sayi2));//true
+
     }
 }

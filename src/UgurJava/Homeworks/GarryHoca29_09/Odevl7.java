@@ -30,7 +30,7 @@ public class Odevl7 {
             }
             if (s2.length() == 0) {
                 return true;
-            } return false;
+            }else return false;
         }return false;
     }
 }
