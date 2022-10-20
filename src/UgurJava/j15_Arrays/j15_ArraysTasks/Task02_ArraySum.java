@@ -25,5 +25,10 @@ public class Task02_ArraySum {
             arrToplam += arr[i];
         }
         System.out.println("array eleman toplamları : "+arrToplam);
+
+        for (int i :arr) {//for each ile çözümü
+            arrToplam += i;
+        }
+        System.out.println("array eleman toplamları : "+arrToplam);
     }
 }

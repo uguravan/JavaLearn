@@ -45,9 +45,9 @@ public class Task01_Market {
 
     public static List getOrtalamaninAltindaKazancGünleri() {
         ArrayList<String> ortAltiGunler = new ArrayList<>();
-        for (int i = 0; i <dayProfits.size(); i++) {
-            if(dayProfits.get(i)<ort){
-                ortAltiGunler.add(days.get(i));
+        for (int i = 0; i <dayProfits.size(); i++) {//for (int i:dayProfits)
+            if(dayProfits.get(i)<ort){              //if(i<ort)
+                ortAltiGunler.add(days.get(i));     //ortAltiGunler.add(i)
             }
         }
         return ortAltiGunler;
@@ -62,7 +62,16 @@ public class Task01_Market {
         }
         return ortUstuGunler;
     }
-
+/*    public static List getOrtalamaninUstundeKazancGünleri() {//foreach ile çözümü
+        ArrayList<String> ortUstuGunler = new ArrayList<>();
+        for (int i:dayProfits) {
+            if(i>ort){
+                ortUstuGunler.add(i);
+            }
+        }
+        return ortUstuGunler;
+    }
+ */
     public static double getOrtalamaKazanc(double sum) {
         double ortalama=sum/dayProfits.size();
         return ortalama;
