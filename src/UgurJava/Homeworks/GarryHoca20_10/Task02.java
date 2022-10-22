@@ -19,9 +19,7 @@ public class Task02 {
                 break;
             }
         }
-        if(counter==1){
-            System.out.println("girdiğiniz sayı "+check+" asal bir sayıdır. ");
-        }
+        if(counter==1) System.out.println("girdiğiniz sayı "+check+" asal bir sayıdır. ");
         scan.close();
     }
 }
