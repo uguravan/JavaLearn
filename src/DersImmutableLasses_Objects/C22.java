@@ -1,7 +1,7 @@
 package DersImmutableLasses_Objects;
 
 public class C22 {
-    private int x;
+/*    private int x;
     private Address address;
 
     public C22(int x, Address address) {
@@ -13,5 +13,5 @@ public class C22 {
     }
     public int getX() {
         return this.x;
-    }
+    }*/
 }
