@@ -1,6 +1,6 @@
 package UgurJava.interview;
 
-public class Task04 {
+public class Task04Revevrse {
     /*
  4 -->>  Write a return method that can reverse string
  Ex : Reverse("ABCD") ==> DCBA

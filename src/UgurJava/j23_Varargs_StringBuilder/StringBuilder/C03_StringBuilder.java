@@ -2,16 +2,27 @@ package UgurJava.j23_Varargs_StringBuilder.StringBuilder;
 
 public class C03_StringBuilder {
     public static void main(String[] args) {
+        //String ile StringBuilder karsilastirmasi
+        /*
+        Compare iki sb'i esit mi diye kontrol etmek icin
+        ilk harften baslayarak tum karakterleri karsilastirir
+        Ayni olan karakterler icin bir sey return etmezken
+        farkli olan ilk karakter icin ascii tablosuna gore kac deger geride veya ileride
+        oldugunu print eder
+        Tamamen ayni ise bize 0 return eder
 
-        // StringBuilder obj create etme...
-        // 1. yol
-        StringBuilder s1 = new StringBuilder("Java");// default capacity 16 bit olan value'su olmayan  bos sb
-        String s2 = "Java";
-        String s3 = "Java";
-        StringBuilder s4 = s1;
+        bir sb ile bir String'i compare etmek istersek Java CTE verir
+         */
+        StringBuilder sb5 = new StringBuilder("javaCAN");
+        StringBuilder sb6 = new StringBuilder("javaCAN");
+        String str1 = "javaCAN";
+        System.out.println("sb5.compareTo(sb6) = " + sb5.compareTo(sb6));//0
+        System.out.println("sb6.compareTo(new StringBuilder(str1)) = " + sb6.compareTo(new StringBuilder(str1)));//0
+        // sb6.compareTo((str1)//CTE-> elam armut kıyası olamazzz
 
-        System.out.println((s2==s3)+" " + (s1==s4));//0 -> length(): sb 'deki karakter sayısı return eder
-        System.out.println(""+s1+" "+s2+" "+s3+" "+s4);
+        System.out.println("sb6.equals(sb6) = " + sb6.equals(sb5));//false-> SB equals == gibi çalışır -> hem value hem de ref değere bakar
+        System.out.println("sb6.equals(sb6) = " + sb6.equals(sb6));//true
 
+        System.out.println("str1.equals(sb6.toString()) = " + str1.equals(sb6.toString()));//True
     }
 }
