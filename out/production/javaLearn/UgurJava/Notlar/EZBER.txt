@@ -1,0 +1,69 @@
+=========================================================================================================
+DOSYA VAR MI YOK MU DURUMUNUN KONTROLU
+
+String path="C:\\Users\\alica\\Downloads\\Unconfirmed 10824.crdownload";
+boolean isExist= Files.exists(Paths.get(path));
+System.out.println(isExist);
+=========================================================================================================
+WebElement tBody = driver.findElement(By.xpath("//tbody"));
+System.out.println("TABLODAKI TUR VERILER: "+ tBody.getText());
+=========================================================================================================
+List<WebElement>allDataOfTable=Driver.getdriver().findElements(By.xpath("//tbody//td"));
+System.out.println("TABLODAKI VERI SAYISI: "+allDataOfTable.size());
+=========================================================================================================
+List<WebElement> Headers_basliklar = tablePage.Alltable;
+        System.out.println("SAYFADAKI BASLIKLAR:");
+     for (WebElement tabloBasliklari : Headers_basliklar) {
+            System.out.println(tabloBasliklari.getText());
+        }
+  System.out.println("sayfa basliklariNIN SAYISI: " + Headers_basliklar.size());
+
+*****
+@FindAll(@FindBy(tagName = "th"))
+public List<WebElement> Alltable;
+
+@FindAll(@FindBy(xpath = "//tbody//td"))
+public List<WebElement> tableDataNumber;
+
+=========================================================================================================
+System.out.println("TABLODAKI SATIR SAYISI");
+System.out.println(Driver.getdriver().findElements(By.xpath("//tbody//tr")).size());
+=========================================================================================================
+List<WebElement>allRowsOfTable=Driver.getdriver().findElements(By.xpath("//tbody//tr"));
+        System.out.println("TABLODAKI SATIRLAR SUNLARDIR:");
+        for (WebElement rows:allRowsOfTable) {
+            System.out.println(rows.getText());
+        }
+=========================================================================================================
+List<WebElement>row4=Driver.getdriver().findElements(By.xpath("//tr[4]//td"));
+        System.out.println("4 SATIRDAKI ELEMANLAR SUNLARDIR:");
+        for (WebElement row4elements:row4){
+            System.out.println(row4elements.getText());
+        }
+=========================================================================================================
+System.out.println("TABLODAKI VERI SAYISI");
+System.out.println(Driver.getdriver().findElements(By.xpath("//tbody//td")).size() + " adet cell vardir. ");
+=========================================================================================================
+        List<WebElement> cellOfTable = Driver.getdriver().findElements(By.xpath("//tbody//td"));
+        System.out.println("TABLODAKI TUM VERILER SUNLARDIR:");
+        for (WebElement cells : cellOfTable) {
+            System.out.println(cells.getText());
+        }
+=========================================================================================================
+
+
+
+=========================================================================================================
+
+List<WebElement> allColoums = driver.findElements(By.xpath("//tbody//tr[1]//td"));
+System.out.println("Tabloidaki toplam sutun sayisi: " + allColoums.size());
+
+
+// Tum sutunlari yazdirmak icin
+for (int i = 1; i <= allColoums.size(); i++) {
+    List<WebElement> allColumsPrint = driver.findElements(By.xpath("//tbody//tr//td[" + i + "]"));
+    for (WebElement w : allColumsPrint) {
+        System.out.println(w.getText());
+    }
+}
+

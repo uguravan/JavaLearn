@@ -1,0 +1,94 @@
+obje
+//JavascriptExecutor js = (JavascriptExecutor) Driver.getdriver();
+
+//js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+//sayfanin en sonuna goturur...
+
+//js.executeScript("arguments[0].scrollIntoView();", practiseMostPage.firstLineOfForm);
+//istedigin satira seni goturur...
+
+==================================================================================================
++++
+//Tiklama sorunu oldugunda kullan...
+public void clickElementByJS(WebElement element) {
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getdriver());
+        js.executeScript("arguments[0].click();", element);
+    }
+//tiklamada sorun olan test methodunun icerisine 
+	clickElementByJS(loginButton);
+//bunu yapistir.
+==================================================================================================
++++
+//SAYFA BASLIGINI JS iLE ALMA
+
+
+    public String getTitleJS(){
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getdriver());
+        String title=js.executeScript("return document.title;").toString();
+        return title;
+}
+
+test methodunun icerisine
+        System.out.println(getTitleJS());
+//bunu yapistir.
+
+==================================================================================================
++++
+ public void scrollDown(){
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getdriver());
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+
+    }
+
+test methodunun icerisine
+       scrollDown()
+//bunu yapistir.	
+
+
+==================================================================================================
++++
+Renk degistirme
+
+public void flash(WebElement element) {
+        String bgColor = element.getCssValue("backgroundcolor");
+        for (int i = 0; i < 10; i++) {
+            changeColor("rgb(0,200,0", element);
+            changeColor(bgColor, element);
+        }
+    }
+    public void changeColor(String color, WebElement element) {
+        JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Driver.getDriver());
+        javascriptExecutor.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+==================================================================================================
++++
+//JS ile bir elemente kadar kaydirma(scroll down)
+    
+public void scrollInToWiew(WebElement element){
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getdriver());
+        js.executeScript("arguments[0].scrollIntoView(true);",element);
+
+    }
+memthod icine bunu eklersin
+WebElement intagram = Driver.getdriver().findElement(By.xpath("//*[.='Instagram']"));
+        scrollInToWiew(intagram);
+
+==================================================================================================
++++
+    public void generateAlert(String message) {
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getdriver());
+        js.executeScript("alert('"+ message + "')");
+    }
+
+memthod icine bunu eklersin
+        generateAlert("Sayfada bir bug bulundu");
+
+
+==================================================================================================
+List<String> allWindows = new ArrayList<>(Driver.getDriver().getWindowHandles());
+Driver.getDriver().switchTo().window(allWindows.get(1));
