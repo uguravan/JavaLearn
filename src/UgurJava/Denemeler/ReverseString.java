@@ -9,7 +9,7 @@ public class ReverseString {
     +3.Using Java Collections Framework reverse() method
     +4.Using character array
     5.Using character array and swap()
-    6.Using + (string concatenation) operator
+    +6.Using + (string concatenation) operator
     7.Using Unicode Right-to-left override (RLO) character
     8.Using a Byte Array
     9.Using Recursion

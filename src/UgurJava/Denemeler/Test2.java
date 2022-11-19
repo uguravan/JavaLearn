@@ -1,66 +1,48 @@
 package UgurJava.Denemeler;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.ListIterator;
+
 public class Test2 {
-    String str = "a";
-
-    void A() {
-
-        try {
-
-            str = str + "b";
-
-            B();
-
-        } catch (Exception e) {
-
-            str = str + "c";
-
-        }
-
-    }
-
-    void B() throws Exception {
-
-        try {
-
-            str = str + "d";
-
-            C();
-
-        } catch (Exception e) {
-
-            str = str + "e";
-
-        } finally {
-
-            str = str + "f";
-
-        }
-
-        str = str + "g";
-
-    }
-
-    void C() throws Exception {
-
-        System.out.println(12/0);
-
-    }
-
-    void display() {
-
-        System.out.println(str);
-
-    }
-
     public static void main(String[] args) {
 
-        Test2 object = new Test2();
+        List<Integer> list = new ArrayList<>();
 
-        object.A();
+        list.add(12);
 
-        object.display();
+        list.add(13);
+
+        list.add(14);
+
+        list.add(15);
+
+        list.add(16);
+
+        System.out.println(list);
+
+        ListIterator<Integer> it = list.listIterator();
+
+        int idx = 0;
+
+        while(it.hasNext()) {
+
+            Integer el = it.next();
+
+            if(idx>2) {
+
+                break;
+
+            }
+
+            it.set(el = el*2);
+
+            System.out.print(el + " ");
+
+            idx++;
+
+        }
 
     }
-
 }
