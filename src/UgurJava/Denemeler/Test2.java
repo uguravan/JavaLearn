@@ -1,48 +1,25 @@
 package UgurJava.Denemeler;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public class Test2 {
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<>();
+        HashSet<String> hSet = new HashSet<>();
 
-        list.add(12);
+        hSet.add("Z");
 
-        list.add(13);
+        hSet.add("Y");
 
-        list.add(14);
+        hSet.add("X");
 
-        list.add(15);
+        hSet.add("X");
 
-        list.add(16);
+        System.out.println(hSet);//A
 
-        System.out.println(list);
+        TreeSet<String> tSet = new TreeSet<>(hSet);
 
-        ListIterator<Integer> it = list.listIterator();
-
-        int idx = 0;
-
-        while(it.hasNext()) {
-
-            Integer el = it.next();
-
-            if(idx>2) {
-
-                break;
-
-            }
-
-            it.set(el = el*2);
-
-            System.out.print(el + " ");
-
-            idx++;
-
-        }
+        System.out.println(tSet);//B
 
     }
 }

@@ -13,16 +13,18 @@ import java.util.Scanner;
 
 public class FlightFare {
     static Scanner scan = new Scanner(System.in);
-
+    static double tripTypeDisc;
+    static double ageDisc;
+    static double cityBill;
     public static void main(String[] args) {
-        System.out.println("Flight fare : " + finalPrice(age(city())));
+        System.out.println("Flight Price : " + (city() * ageDiscount() * tripType())+" $");
         scan.close();
     }
 
     public static double city() {
         System.out.print("Please choose your destination: B or C or D ");
         char city = scan.next().trim().toUpperCase().charAt(0);
-        double cityBill=0;
+
         switch (city) {
             case 'B': cityBill=500*0.1; break;
             case 'C': cityBill=700*0.1; break;
@@ -32,26 +34,26 @@ public class FlightFare {
         return cityBill;
     }
 
-    public static double age(double cityBill) {
-        double ageBill=0;
+    public static double ageDiscount() {
         System.out.print("Please enter your age: ");
         int age = scan.nextInt();
         if (age>=0) {
-            ageBill = age > 65 ? cityBill * 0.7 : age > 24 ? cityBill : age > 12 ? cityBill * 0.9 : cityBill * 0.5;
-        } else {System.out.println("Please enter your information appropriately."); age(cityBill);}
-        return ageBill;
+            ageDisc = (age > 65 ? 0.7 : (age > 24 ? 1 : (age > 12 ? 0.9 : 0.5)));
+        } else {System.out.println("Please enter your information appropriately."); ageDiscount();}
+        return ageDisc;
     }
 
-    public static double finalPrice(double ageBill) {
-        double finalP=0;
+    public static double tripType() {
         System.out.print("Please choose your flight type: Round-trip<1> or One-way<2> ");
         int choice = scan.nextInt();
-
         switch (choice) {
-            case 1: finalP = 2*ageBill*0.8; break;
-            case 2: finalP = ageBill; break;
-            default: System.out.println("Please enter your information appropriately."); finalPrice(ageBill);
+            case 1: tripTypeDisc = 2*0.8; break;
+            case 2: tripTypeDisc = 1; break;
+            default:
+                System.out.println("enter your information appropriately. ");
+                tripType();
+                break;
         }
-        return finalP;
+        return tripTypeDisc;
     }
 }
