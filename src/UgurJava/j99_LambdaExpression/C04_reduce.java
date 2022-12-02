@@ -16,6 +16,7 @@ public class C04_reduce {
         System.out.println(sayi.stream().reduce(0, (x, y) -> x + y));
         System.out.println();
         System.out.println(sayi.stream().reduce(Integer::sum));
+        System.out.println(sayi.stream().reduce(0, (x,y) -> x+y));
         System.out.println();
 
         System.out.println(sayi.stream().filter(t -> t > 24 && t % 2 == 1).reduce(Math::min));

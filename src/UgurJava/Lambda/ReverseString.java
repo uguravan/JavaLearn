@@ -1,4 +1,4 @@
-package UgurJava.Denemeler;
+package UgurJava.Lambda;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -107,7 +107,6 @@ public class ReverseString {
             bytes[l] = bytes[h];
             bytes[h] = temp;
         }
-
         // convert byte array back into a string
         System.out.println("Byte Array ile "+new String(bytes));
     }
@@ -138,18 +137,18 @@ public class ReverseString {
             ch[i++] = stack.pop();// assign each popped character back to the character array
         }
         System.out.println("Stack ile: "+String.copyValueOf(ch));
+        System.out.println("Stack ile: "+new String (ch));
     }
 
     private static void method11Lambda(String str){
+        ArrayList<String> list2 = new ArrayList<String>(List.of(str.split("")));
         System.out.println("Lambda ile: "+str.chars().mapToObj(c -> (char) c).reduce("", (s, c) -> c + s, (s1, s2) -> s2 + s1));
         System.out.println("Lambda ile: "+str.chars().mapToObj(ch -> Character.toString(ch)).reduce("", (s, ch) -> ch + s));
         System.out.println("Lambda ile: "+str.chars().mapToObj(Character::toString).reduce("", (s, ch) -> ch + s));
-        System.out.println("Lambda ile: "+Stream.of(str)
-                .map(t -> new StringBuilder(t).reverse())
-                .collect(Collectors.joining()));
-
+        System.out.println("Lambda ile: "+list2.stream().reduce("", (s, ch) -> ch + s));
+        System.out.println("Lambda ile: "+Stream.of(str).map(t -> t.split("")).flatMap(Arrays::stream).reduce("", (s, ch) -> ch + s));
+        System.out.println("Lambda ile: "+Stream.of(str).map(t -> new StringBuilder(t).reverse()).collect(Collectors.joining()));
     }
-
     public static void method12UnicodeRLO(String str) {
         System.out.println("Unicode Right-to-Left Override ile: "+"\u202E" + str);
     }
